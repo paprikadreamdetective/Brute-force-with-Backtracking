@@ -6,10 +6,10 @@ El cifrado de Vigenère es un cifrado polialfabético que utiliza una clave repe
 
 ### 🔹 Cifrado:
 Sea:
-- \( T_i \) el carácter \( i \)-ésimo del texto en claro.
-- \( K_i \) el carácter \( i \)-ésimo de la clave repetida hasta coincidir con la longitud del texto.
-- \( C_i \) el carácter \( i \)-ésimo del texto cifrado.
-- \( A = 0, B = 1, C = 2, ..., Z = 25 \) (asignación numérica de las letras).
+-  $T_i$ el carácter $i$-ésimo del texto en claro.
+- $K_i$ el carácter $i$-ésimo de la clave repetida hasta coincidir con la longitud del texto.
+- $C_i$ el carácter $i$-ésimo del texto cifrado.
+- $ A = 0, B = 1, C = 2, ..., Z = 25 $ (asignación numérica de las letras).
 
 El cifrado se define como:
 

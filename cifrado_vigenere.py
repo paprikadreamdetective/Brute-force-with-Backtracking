@@ -1,5 +1,5 @@
 class CifradoVigenere:
-    def __init__() -> None:
+    def __init__(self) -> None:
         _text = ''
         _true_key = ''
 

@@ -40,3 +40,57 @@ Si queremos cifrar el texto **"TEXTO"** con la clave **"CLAVE"**, primero conver
 Texto cifrado resultante: **"VPXOS"**.
 
 Para descifrar, usamos la ecuación del descifrado y recuperamos el mensaje original.
+
+# Algoritmo de Backtracking
+
+## Definición Matemática
+
+El **backtracking** es una técnica de búsqueda en la cual se exploran todas las soluciones posibles de un problema de manera recursiva, retrocediendo cuando se detecta que una solución parcial no puede conducir a una solución válida.
+
+El algoritmo sigue una estructura general:
+
+1. Si se ha encontrado una solución válida, se almacena o retorna.
+2. Si la solución parcial no es válida, se retrocede (**backtrack**).
+3. Se prueban todas las opciones posibles desde el estado actual.
+4. Se avanza recursivamente con cada opción y se repite el proceso.
+
+Podemos representar el **backtracking** de manera formal con una función recursiva:
+
+$$
+\text{Backtrack}(sol, n) =
+\begin{cases} 
+\text{Procesar solución si es válida}, & \text{si } n \text{ es una solución completa} \\
+\text{Para cada opción posible:} & \\
+\quad \text{Agregar opción a } sol & \\
+\quad \text{Llamar recursivamente a } \text{Backtrack}(sol, n+1) & \\
+\quad \text{Eliminar opción y retroceder} & 
+\end{cases}
+$$
+
+---
+
+## Ejemplo: Generación de Claves con Backtracking
+
+Imaginemos que queremos generar todas las combinaciones posibles de una clave de longitud $L$ utilizando un alfabeto $\Sigma$ con $N$ caracteres. Podemos hacerlo con backtracking probando cada combinación de letras.
+
+### Algoritmo:
+1. Se define un conjunto de caracteres posibles $\Sigma = \{A, B, C, ..., Z\}$.
+2. Se construye una clave de longitud $L$, probando todas las combinaciones posibles.
+3. Si la clave alcanza la longitud deseada, se prueba su validez.
+4. Si la clave no es correcta, se retrocede y se intenta una nueva combinación.
+
+El número total de combinaciones generadas es:
+
+$$
+|\Sigma|^L = N^L
+$$
+
+Si $|\Sigma| = 26$ (alfabeto en inglés) y la clave tiene longitud $L = 5$, entonces hay:
+
+$$
+26^5 = 11,881,376
+$$
+
+posibles claves que deben probarse.
+
+

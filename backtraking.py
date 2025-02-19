@@ -1,6 +1,3 @@
-from cifrado_vigenere import CifradoVigenere
-import itertools
-
 def backtracking(alfabeto, sol, n, level, cifrado, cifrado_vigenere):
     if n < level:
         for letra in alfabeto:
@@ -14,15 +11,3 @@ def backtracking(alfabeto, sol, n, level, cifrado, cifrado_vigenere):
             print("Se encontro la clave")
             exit()
 
-def main():
-    cifrado = "VPXOS"  # Fragmento del mensaje cifrado
-    longitud_clave = 5  # Se asume que sabemos la longitud de la clave
-    alfabeto = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"  # Letras mayúsculas como claves posibles
-    solucion = ["A"] * longitud_clave  # Inicializar la clave con 'A'
-    cifrado_vigenere = CifradoVigenere()
-    print("Iniciando ataque por fuerza bruta con backtracking...")
-    #print(descifrar_vigenere(cifrado, "CLAVE"))
-    backtracking(alfabeto, solucion, 0, longitud_clave, cifrado, cifrado_vigenere)
-
-if __name__ == "__main__":
-    main()

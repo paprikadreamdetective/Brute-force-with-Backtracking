@@ -13,16 +13,16 @@ Sea:
 
 El cifrado se define como:
 
-$
-C_i = (T_i + K_i) \mod 26
-$
+
+$C_i = (T_i + K_i) \mod 26$
+
 
 ### 🔹 Descifrado:
 Para recuperar el texto original, se usa la operación inversa:
 
-$
-T_i = (C_i - K_i + 26) \mod 26
-$
+
+$T_i = (C_i - K_i + 26) \mod 26$
+
 
 Donde $+26$ se usa para evitar valores negativos antes de aplicar el módulo.
 
